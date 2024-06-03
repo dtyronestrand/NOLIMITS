@@ -1,0 +1,145 @@
+
+// LEGACY 6.0 All st- classes are legacy
+
+.status-wrap {
+	display: flex;
+	align-items: center;
+
+	.status-tag {
+		text-transform: capitalize;
+    margin-right: 10px;
+	}
+}
+
+.status-tag {
+	display: inline-block;
+	padding: 2px 10px 4px;
+	color: color(text-secondary);
+	background-color: color(bg-10);
+	border: 1px solid transparent;
+	font-size: 85%;
+  text-transform: none;
+	border-radius: $border-radius-full;
+  white-space: nowrap;
+}
+
+.status-tag--big {
+	font-size: 0.95em;
+}
+
+.st-open,
+.st-enable,
+.st-status,
+.st-unlocked,
+
+.status-tag--open {
+	background: color(bg-blank);
+	color: color(success);
+  border-color: color(success);
+
+	&::before {
+		background: color(bg-blank);
+	}
+}
+
+.st-spam,
+.st-error,
+.st-closed,
+.st-banned,
+.st-locked,
+.st-disable,
+
+.status-tag--closed {
+  background: color(bg-blank);
+	color: color(danger);
+  border-color: color(danger);
+
+	&::before {
+		background: #ee0707;
+	}
+}
+
+// LEGACY 6.0
+.st-spam,
+.st-error,
+.st-closed,
+.st-banned,
+.st-open,
+.st-draft,
+.st-pending,
+.st-info,
+.st-note,
+.st-warning,
+.st-locked,
+.st-unlocked,
+.st-enable,
+.st-disable,
+.st-status{
+	@extend .status-tag;
+}
+
+
+.st-draft{
+  background-color: color(bg-blank);
+  border-color: $gray-medium-light;
+	color: $gray-medium;
+}
+
+.st-pending,
+.st-warning,
+.st-note{
+	background-color: color(bg-blank);
+  border-color: color(warning);
+	color: color(warning);
+}
+
+.st-info{
+	background-color: color(bg-blank);
+	border-color: color(accent-medium);
+	color: color(accent);
+}
+
+// Status tag styling in select dropdowns
+.select__dropdown,
+.select__button {
+
+  .status-tag {
+    font-size: inherit;
+    font-weight: inherit;
+    text-transform: inherit;
+    letter-spacing: inherit;
+    background-color: inherit !important;
+    background: inherit;
+    display: inherit;
+    border-radius: inherit;
+  }
+}
+
+[data-input-value="status"] {
+	.select__button {
+		.status-tag {
+			border: inherit;
+			padding: inherit;
+		}
+	}
+
+	.select__dropdown {
+		.select__dropdown-item {
+			padding: 0;
+			min-height: 0;
+			margin-bottom: 5px;
+			border-radius: 1000px;
+
+			& > span {
+				width: 100%;
+			}
+		}
+
+		.status-tag {
+			min-height: 38px;
+			padding: 7px 15px;
+			width: 100%;
+			border-radius: 1000px;
+		}
+	}
+}

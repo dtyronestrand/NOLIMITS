@@ -1,0 +1,345 @@
+
+.dropdown {
+	@include shadow-dropdown;
+
+	border: 1px solid color(dropdown-border);
+	background: color(bg-dropdown);
+	padding: $s-s 0;
+	border-radius: $border-radius-base;
+	// overflow: hidden;
+	text-align: left;
+	z-index: 200;
+	max-width: 600px;
+	min-width: 160px;
+	max-height: 90vh;
+	overflow-y: auto;
+
+	display: none;
+}
+
+.dropdown--open {
+	display: block;
+}
+
+.dropdown--accent {
+  border-top: 5px solid color(brand-primary);
+}
+
+.dropdown--full-width {
+	width: 100%;
+	max-width: 100%;
+}
+
+.dropdown__scroll {
+	max-height: 260px;
+	overflow-y: auto;
+
+	ul {
+		margin-top: 0;
+		list-style-type: none;
+
+		a {
+			padding: 5px 15px;
+			min-height: 30px;
+		}
+	}
+}
+
+.dropdown__scroll--small {
+	max-height: 180px;
+}
+
+
+.dropdown__link {
+	// transition: background ease 150ms;
+  min-height: 38px;
+	display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+	height: auto;
+	line-height: inherit;
+	padding: 7px 15px;
+	// font-size: 0.92em;
+	color: color(text-primary);
+	// width: 100%;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  border-radius: $border-radius-base;
+	align-items: center;
+
+	&.with-divider {
+		border-top: 1px solid var(--ee-border);
+	}
+
+	a {
+		color: color(text-primary);
+	}
+
+	&:hover, &:focus {
+		// background: color(bg-10);
+		// color: color(text-primary);
+		background-color: color(bg-dropdown-hover);
+		color: color(text-primary);
+
+		i {
+			// color: color(link-hover);
+		}
+	}
+
+	.fas, .fal, .far {
+		// Make sure icons line up next to each other
+		@extend .fa-fw;
+		margin-right: $s-xs;
+		color: color(text-secondary);
+	}
+
+	@include focus-visible {
+		//@include focus-outline-inset;
+	}
+}
+
+.dropdown__link--selected {
+	background-color: color(bg-dropdown-selected);
+
+	&::before {
+		@extend %fa-icon;
+		@extend .fal;
+		@extend .fa-fw;
+
+		margin-right: 5px;
+		content: fa-content($fa-var-check);
+		color: color(accent);
+	}
+
+	&:hover {
+		background: color(accent-light);
+		// color: color(error);
+
+		&::before {
+			content: fa-content($fa-var-times);
+			color: color(accent);
+		}
+	}
+}
+
+.dropdown__link--danger {
+	&:hover {
+		background: color(error-light);
+		color: color(error);
+
+		i {
+			color: color(error);
+		}
+	}
+}
+
+.dropdown__link-shortcut {
+	// @include font-monospace;
+	float: right;
+	letter-spacing: 1px;
+	color: color(text-secondary);
+	text-transform: uppercase;
+  font-size: 80%;
+}
+
+.dropdown__link-entryId {
+	color: var(--ee-text-secondary);
+	font-size: 80%;
+	margin-left: 3px;
+}
+
+.dropdown__link-status-indicator {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    text-transform: capitalize;
+    font-size: 70%;
+    border: 1px solid transparent;
+    background: var(--ee-bg-blank);
+    padding: 0 5px;
+    border-radius: 1000px;
+}
+
+.dropdown__link-right {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 80%;
+  color: color(text-secondary);
+  margin-left: auto;
+  padding-left: 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 40%;
+  flex-shrink: 0;
+  float: right;
+}
+
+.dropdown__item {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	// font-size: 0.92em;
+	color: color(text-primary);
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 2px;
+  border-radius: $border-radius-base;
+
+
+	&:hover {
+		// background: color(bg-10);
+		// color: color(text-primary);
+		background-color: color(bg-dropdown-hover);
+		color: color(text-primary);
+
+		i {
+			// color: color(link-hover);
+		}
+
+    .dropdown-reorder {
+      cursor: move;
+
+      label {
+        cursor: move;
+      }
+    }
+	}
+
+	a:not(.dropdown__item-button) {
+		width: 100%;
+		flex: 1 1;
+		display: block;
+		height: 100%;
+		padding: 5px 15px;
+		line-height: $line-height-small;
+		color: color(text-primary);
+
+		&:hover {
+			color: color(text-primary);
+		}
+
+		.fas, .fal {
+			// Make sure icons line up next to each other
+			@extend .fa-fw;
+
+			margin-right: $s-xs;
+			color: color(text-secondary);
+		}
+	}
+
+  label {
+    font-weight: normal;
+    white-space: nowrap;
+  }
+}
+
+.dropdown__item-button {
+	// font-size: 0.8em !important;
+	// height: 18px;
+	// line-height: 18px;
+	margin-right: 5px;
+
+	i {
+		// color: #fff !important;
+		margin: 0 !important;
+	}
+}
+
+.dropdown__divider {
+	margin: $s-s 0;
+	border-top: 1px solid color(dropdown-border);
+
+	// Hide redundant dropdown dividers that are next to each other
+	& + .dropdown__divider {
+		display: none;
+	}
+}
+
+.dropdown__header {
+	font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+	// font-weight: bold;
+	margin: $s-s $s-m $s-xs;
+	color: color(text-secondary);
+}
+
+.dropdown__search {
+	padding: $s-s;
+	margin-top: -$s-s;
+	margin-bottom: $s-s;
+	background: color(bg-0);
+	border-radius: $border-radius-small $border-radius-small 0 0;
+  border-bottom: 1px solid color(border);
+
+  .filter-bar {
+    margin-top: 0px;
+
+    .filter-bar__item {
+      margin-bottom: 0px;
+
+      @include m-tablet-down {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+.dropdown__search-input {
+	min-width: 100%;
+}
+
+// Custom styles for Pro validation dropup
+.app-pro-validation {
+  padding: 12px 20px 20px;
+  text-align: center;
+  background-color: color(bg-0);
+  overflow: hidden;
+
+  h5 {
+    font-size: 15px;
+  }
+
+  .pro-message {
+    color: color(text-secondary);
+    font-size: 12px;
+    margin-bottom: 10px;
+
+    em {
+      color: color(brand-primary);
+      font-style: normal;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+
+	  &.license-status-text-expired {
+		color: color(brand-warning);
+	  }
+
+	  &.license-status-text-invalid {
+		color: color(brand-danger);
+	  }
+    }
+  }
+
+  .app-pro-validation-actions {
+    background-color: color(gray-blank);
+    border-top: 1px solid color(border);
+    margin: 0 -20px -20px -20px;
+    padding: 12px 12px 12px 12px;
+  }
+
+  .button {
+    display: block;
+    margin-bottom: 5px;
+
+    &:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}
