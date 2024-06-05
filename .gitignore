@@ -98,9 +98,7 @@ images/pm_attachments/*
 !images/pm_attachments/index.html
 !images/pm_attachments/.htaccess
 
-images/uploads/*
-!images/uploads/index.html
-!images/uploads/.htaccess
+
 
 themes/third_party/
 
