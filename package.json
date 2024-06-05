@@ -32,10 +32,12 @@
     "@ckeditor/ckeditor5-editor-classic": "^41",
     "@ckeditor/ckeditor5-engine": "^41",
     "@ckeditor/ckeditor5-essentials": "^41",
+    "@ckeditor/ckeditor5-find-and-replace": "^41",
     "@ckeditor/ckeditor5-font": "^41",
     "@ckeditor/ckeditor5-heading": "^41",
     "@ckeditor/ckeditor5-horizontal-line": "^41",
     "@ckeditor/ckeditor5-html-embed": "^41",
+    "@ckeditor/ckeditor5-html-support": "^41",
     "@ckeditor/ckeditor5-image": "^41",
     "@ckeditor/ckeditor5-indent": "^41",
     "@ckeditor/ckeditor5-link": "^41",
@@ -46,18 +48,16 @@
     "@ckeditor/ckeditor5-paragraph": "^41",
     "@ckeditor/ckeditor5-paste-from-office": "^41",
     "@ckeditor/ckeditor5-remove-format": "^41",
+    "@ckeditor/ckeditor5-show-blocks": "^41",
+    "@ckeditor/ckeditor5-source-editing": "^41",
     "@ckeditor/ckeditor5-special-characters": "^41",
+    "@ckeditor/ckeditor5-style": "^41",
     "@ckeditor/ckeditor5-table": "^41",
     "@ckeditor/ckeditor5-theme-lark": "^41",
     "@ckeditor/ckeditor5-typing": "^41",
     "@ckeditor/ckeditor5-ui": "^41",
-    "@ckeditor/ckeditor5-word-count": "^41",
-    "@ckeditor/ckeditor5-source-editing": "^41",
-    "@ckeditor/ckeditor5-show-blocks": "^41",
-    "@ckeditor/ckeditor5-style": "^41",
-    "@ckeditor/ckeditor5-html-support": "^41",
     "@ckeditor/ckeditor5-upload": "^41",
-    "@ckeditor/ckeditor5-find-and-replace": "^41",
+    "@ckeditor/ckeditor5-word-count": "^41",
     "@types/jquery": "^3.3.31",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
@@ -89,5 +89,7 @@
     "webpack": "^5.84.1",
     "webpack-cli": "^4.9.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@material/button": "^14.0.0"
+  }
 }
