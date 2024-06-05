@@ -42,9 +42,7 @@ system/user/language/*
 system/user/logs/*
 !system/user/logs/index.html
 
-system/user/templates/*
-!system/user/templates/index.html
-!system/user/templates/.htaccess
+
 
 themes/user/*
 themes/ee/asset/javascript/compressed/

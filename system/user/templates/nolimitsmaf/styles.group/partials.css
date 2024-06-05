@@ -1,0 +1,142 @@
+.topnav{
+	background-color:var(--color-primary);
+	color:var(--color-on-primary);
+	font-family:"Protest Revolution";
+	font-size:3em;
+	overflow:hidden;
+}
+
+.topnav > ul > li > a {
+	text-decoration:none;
+	color: inherit;
+	float:left;
+	display:block;
+	text-align:center;
+	padding: 20px 16px;
+	font-size: 1em;
+	
+}
+
+.topnav > ul > li > a:hover {
+	background-color: var(--color-primary-container);
+	color: var(--color-on-primary-container);
+}
+
+.topnav > ul > li >a.active {
+	background-color: var(--color-primary-container);
+	color: var(--color-on-primary-container);
+}
+.Footer {
+    display: flex; 
+    justify-content:space-around;
+    height:100%;
+    color: var(--color-on-primary);
+    background-color: var(--color-primary);
+}
+
+figure{
+    display:content;
+  	align-self:flex-end;
+	
+   
+   
+}
+.break{
+flex-bias:100%;
+height:0;
+}
+.Call {
+    display:flex;
+    align-self: center;
+    justify-self: initial;
+    font-size: 4em;
+    font-family: "Protest Revolution";
+	justify-content:center;
+	flex-wrap:wrap;
+}
+
+.footer-links{
+display:flex;
+justify-content:space-between;
+height:100%;
+}
+
+.button {
+	position:relative;
+	display:block;
+	margin:20px;
+	
+}
+
+.button a{
+	color:var(--color-on-primary-container);
+	font-family: "Protest Revolution";
+	font-weight: bold;
+	font-size: 1em;
+	text-align:center;
+	text-decoration:none;
+	background-color: var(--color-primary-container);
+	display:block;
+	position:relative;
+	padding:20px 40px;
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+	text-shadow: 0px 1px 0px #000;
+	filter: dropshadow(color=#000, offx=0px, offy=1px);
+	
+	-webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+	-moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+	box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+}
+
+.button a:active{
+	top:10px;
+	background-color:#F78900;
+	
+	-webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+	-moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+	box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  }
+  
+  .button:after{
+	content:"";
+	height:100%;
+	width:100%;
+	padding:4px;
+	position: absolute;
+	bottom:-15px;
+	left:-4px;
+	z-index:-1;
+	background-color:#2B1800;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  }
+  
+  
+
+.Link1 { grid-area: Link1; max-height: 50em; }
+.Link2 { grid-area: Link2; max-height:50em;}
+.Link3 { grid-area: Link3;max-height:50em; }
+
+a:hover{
+    animation: myAnim 1s ease-in-out 0s 2 normal forwards;
+}
+
+@keyframes myAnim {
+	0% {
+		transform: scale(1);
+	}
+
+	50% {
+		transform: scale(1.1);
+	}
+
+	100% {
+		transform: scale(1);
+	}
+}

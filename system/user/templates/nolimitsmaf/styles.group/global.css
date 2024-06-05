@@ -1,0 +1,133 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url('https://fonts.googleapis.com/css2?family=Protest+Revolution&display=swap');
+@use "@material/web/styles";
+
+.protest-revolution-regular {
+  font-family: "Protest Revolution", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+:root {
+    --nlmaaf-display-small: Roboto;
+
+    /* font sizes */
+    --nlmaaf-display-small-size: 2.25rem;
+    --m3-label-large-size: 0.875rem;
+    --m3-body-small-size: 0.75rem;
+    --gap-xl: 1.25rem;
+    --gap-2xs-3: 0.643rem;
+  
+    /* Paddings */
+    --padding-xl: 1.25rem;
+    --padding-2xs: 0.687rem;
+    --padding-smi-5: 0.781rem;
+  
+    /* Effects */
+    --m3-elevation-light-1: 0px 1px 2px rgba(0, 0, 0, 0.3),
+      0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+  
+    --transition: 250ms ease-out;
+
+    /* Colors */
+    --color-primary: rgb(119 90 11);
+    --color-surface-tint: rgb(119 90 11);
+    --color-on-primary: rgb(255 255 255);
+    --color-primary-container: rgb(255 223 157);
+    --color-on-primary-container: rgb(37 26 0);
+    --color-secondary: rgb(0 105 114);
+    --color-on-secondary: rgb(255 255 255);
+    --color-secondary-container: rgb(157 240 251);
+    --color-on-secondary-container: rgb(0 31 35);
+    --color-tertiary: rgb(143 76 56);
+    --color-on-tertiary: rgb(255 255 255);
+    --color-tertiary-container: rgb(255 219 209);
+    --color-on-tertiary-container: rgb(58 11 1);
+    --color-error: rgb(186 26 26);
+    --color-on-error: rgb(255 255 255);
+    --color-error-container: rgb(255 218 214);
+    --color-on-error-container: rgb(65 0 2);
+    --color-background: rgb(255 248 242);
+    --color-on-background: rgb(31 27 19);
+    --color-surface: rgb(252 250 236);
+    --color-on-surface: rgb(28 28 20);
+    --color-surface-variant: rgb(228 225 236);
+    --color-on-surface-variant: rgb(70 70 79);
+    --color-outline: rgb(119 118 128);
+    --color-outline-variant: rgb(199 197 208);
+    --color-shadow: rgb(0 0 0);
+    --color-scrim: rgb(0 0 0);
+    --color-inverse-surface: rgb(49 49 40);
+    --color-inverse-on-surface: rgb(243 241 228);
+    --color-inverse-primary: rgb(233 193 108);
+    --color-primary-fixed: rgb(255 223 157);
+    --color-on-primary-fixed: rgb(37 26 0);
+    --color-primary-fixed-dim: rgb(233 193 108);
+    --color-on-primary-fixed-variant: rgb(91 67 0);
+    --color-secondary-fixed: rgb(157 240 251);
+    --color-on-secondary-fixed: rgb(0 31 35);
+    --color-secondary-fixed-dim: rgb(129 211 222);
+    --color-on-secondary-fixed-variant: rgb(0 79 86);
+    --color-tertiary-fixed: rgb(255 219 209);
+    --color-on-tertiary-fixed: rgb(58 11 1);
+    --color-tertiary-fixed-dim: rgb(255 181 160);
+    --color-on-tertiary-fixed-variant: rgb(114 53 35);
+    --color-surface-dim: rgb(220 218 206);
+    --color-surface-bright: rgb(252 250 236);
+    --color-surface-container-lowest: rgb(255 255 255);
+    --color-surface-container-low: rgb(246 244 231);
+    --color-surface-container: rgb(240 238 225);
+    --color-surface-container-high: rgb(235 232 220);
+    --color-surface-container-highest: rgb(229 227 214);
+  
+  }
+
+  /* Rests */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
